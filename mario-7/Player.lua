@@ -7,6 +7,8 @@ require 'Animation'
 Player = {}
 Player.__index = Player
 
+local WALKING_SPEED = 140
+
 function Player:create(map)
     local this = {
         x = 0,
@@ -56,9 +58,10 @@ function Player:create(map)
             frames = {
                 love.graphics.newQuad(18, 0, 16, 32, this.texture:getDimensions()),
                 love.graphics.newQuad(34, 0, 16, 32, this.texture:getDimensions()),
-                love.graphics.newQuad(50, 0, 16, 32, this.texture:getDimensions())
+                love.graphics.newQuad(50, 0, 16, 32, this.texture:getDimensions()),
+                love.graphics.newQuad(34, 0, 16, 32, this.texture:getDimensions()),
             },
-            interval = 0.10
+            interval = 0.07
         })
     }
 
@@ -72,13 +75,13 @@ function Player:create(map)
             -- begin moving if left or right is pressed
             if love.keyboard.isDown('left') then
                 direction = 'left'
-                this.dx = -100
+                this.dx = -WALKING_SPEED
                 this.state = 'walking'
                 this.animations['walking']:restart()
                 this.animation = this.animations['walking']
             elseif love.keyboard.isDown('right') then
                 direction = 'right'
-                this.dx = 100
+                this.dx = WALKING_SPEED
                 this.state = 'walking'
                 this.animations['walking']:restart()
                 this.animation = this.animations['walking']
@@ -89,10 +92,10 @@ function Player:create(map)
             -- to idle if we're not moving
             if love.keyboard.isDown('left') then
                 direction = 'left'
-                this.dx = -80
+                this.dx = -WALKING_SPEED
             elseif love.keyboard.isDown('right') then
                 direction = 'right'
-                this.dx = 80
+                this.dx = WALKING_SPEED
             else
                 this.dx = 0
                 this.state = 'idle'

@@ -3,7 +3,7 @@
     Author: Colton Ogden
     Original Credit: Nintendo
 
-    Adds collision detection to tiles, pipes, and bricks.
+    Adds ability to hit bricks.
 ]]
 
 -- global key-handling

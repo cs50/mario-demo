@@ -3,7 +3,7 @@
     Author: Colton Ogden
     Original Credit: Nintendo
 
-    Adds ground collision.
+    Adds collision for all collidable tile types.
 ]]
 
 -- global key-handling

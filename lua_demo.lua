@@ -17,6 +17,16 @@ function say(text)
     print(text)
 end
 
+--
+-- If statements
+--
+if world == 'world' then
+    print('world!')
+else
+    print('hello!')
+end
+
+
 -- calling our function (note the .. operator to concatenate strings!)
 say(hello .. world)
 
@@ -33,7 +43,7 @@ while i > 0 do
 end
 
 -- for loop, increments from 1 to 10
-for j = 1, 10 do
+for j = 10, 1, -1 do
     print(j)
 end
 

@@ -17,6 +17,9 @@ function say(text)
     print(text)
 end
 
+-- calling our function (note the .. operator to concatenate strings!)
+say(hello .. world)
+
 --
 -- If statements
 --
@@ -25,10 +28,6 @@ if world == 'world' then
 else
     print('hello!')
 end
-
-
--- calling our function (note the .. operator to concatenate strings!)
-say(hello .. world)
 
 --
 -- Loops

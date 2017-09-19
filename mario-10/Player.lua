@@ -120,7 +120,6 @@ function Player:create(map)
             end
 
             -- check for collisions moving left and right
-            -- check for collisions moving left and right
             this:checkRightCollision()
             this:checkLeftCollision()
 

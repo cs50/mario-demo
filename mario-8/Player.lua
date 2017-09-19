@@ -131,6 +131,7 @@ function Player:create(map)
             -- apply map's gravity before y velocity
             this.dy = this.dy + this.map.gravity
 
+            -- simple way of stopping fall; stop when halfway down map
             if this.y == this.map.tileHeight *
                 ((this.map.mapHeight - 2) / 2) - this.height then
                 this.dy = 0

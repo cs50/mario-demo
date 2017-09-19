@@ -23,7 +23,7 @@ function love.load()
     x = virtualWidth / 2 - sprite:getWidth() / 2
     y = virtualHeight / 2 - sprite:getHeight() / 2
 
-    push:setupScreen(virtualWidth, virtualHeight, 1280, 720, {
+    push:setupScreen(virtualWidth, virtualHeight, 640, 480, {
         fullscreen = false
     })
 end
@@ -36,17 +36,17 @@ end
 -- a callback function called whenever we press a key
 function love.keypressed(key)
     if key == 'left' then
-        x = x - 1 * speed
+        x = x - speed
     end
     if key == 'right' then
-        x = x + 1 * speed
+        x = x + speed
     end
 
     if key == 'up' then
-        y = y - 1 * speed
+        y = y - speed
     end
     if key == 'down' then
-        y = y + 1 * speed
+        y = y + speed
     end
 
     if key == 'escape' then

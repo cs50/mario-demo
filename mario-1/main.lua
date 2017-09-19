@@ -26,9 +26,6 @@ function love.load()
     -- makes upscaling look pixel-y instead of blurry
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
-    -- sets up a different, better-looking retro font as our default
-    love.graphics.setFont(love.graphics.newFont('fonts/font.ttf', 8))
-
     -- sets up virtual screen resolution for an authentic retro feel
     push:setupScreen(virtualWidth, virtualHeight, windowWidth, windowHeight, {
         fullscreen = false,

@@ -12,6 +12,9 @@ Map.__index = Map
 TILE_BRICK = 1
 TILE_EMPTY = 29
 
+-- a speed to multiply delta time to scroll map; smooth value
+local scrollSpeed = 62
+
 -- constructor for our map object
 function Map:create()
     local this = {
@@ -69,7 +72,7 @@ end
 
 -- function to update camera offset with delta time
 function Map:update(dt)
-    self.camX = self.camX + dt
+    self.camX = self.camX + dt * scrollSpeed
 end
 
 -- returns an integer value for the tile at a given x-y coordinate

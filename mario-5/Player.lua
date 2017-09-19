@@ -30,7 +30,7 @@ function Player:create(map)
         state = 'idle',
 
         -- determines sprite flipping
-        direction = 'right',
+        direction = 'left',
 
         -- x and y velocity
         dx = 0,

@@ -62,7 +62,7 @@ function love.draw()
     love.graphics.clear(108, 140, 255, 255)
 
     -- renders our map object onto the screen
-    love.graphics.translate(math.floor(-map.camX), math.floor(-map.camY))
+    love.graphics.translate(math.floor(-map.camX + 0.5), math.floor(-map.camY + 0.5))
     map:render()
 
     -- end virtual resolution

@@ -27,10 +27,6 @@ function Map:create()
     -- generate a quad (individual frame/sprite) for each tile
     this.tileSprites = generateQuads(this.spritesheet, 16, 16)
 
-    -- cache width and height of map in pixels
-    this.mapWidthPixels = this.mapWidth * this.tileWidth
-    this.mapHeightPixels = this.mapHeight * this.tileHeight
-
     -- more OO boilerplate so we have access to class functions
     setmetatable(this, self)
 
@@ -41,7 +37,7 @@ function Map:create()
         end
     end
 
-    -- -- fill bottom half of map with tiles
+    -- fill bottom half of map with tiles
     for y = this.mapHeight / 2, this.mapHeight do
         for x = 1, this.mapWidth do
             this:setTile(x, y, TILE_BRICK)

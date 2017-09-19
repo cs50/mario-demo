@@ -70,6 +70,8 @@ end
 
 function Player:update(dt)
     self.behaviors[self.state](dt)
+
+    -- new X calculation on velocity
     self.x = self.x + self.dx * dt
 end
 

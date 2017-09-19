@@ -42,7 +42,7 @@ while i > 0 do
 end
 
 -- for loop, increments from 1 to 10
-for j = 1, 10 do
+for j = 10, 1, -1 do
     print(j)
 end
 

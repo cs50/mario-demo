@@ -19,9 +19,6 @@ virtualHeight = 243
 windowWidth = 1280
 windowHeight = 720
 
--- a speed to multiply delta time to scroll map; smooth value
-local scrollSpeed = 62
-
 -- an object to contain our map data
 map = Map:create()
 
@@ -66,7 +63,7 @@ function love.draw()
     love.graphics.clear(108, 140, 255, 255)
 
     -- renders our map object onto the screen
-    love.graphics.translate(math.floor(-map.camX * scrollSpeed + 0.5), -map.camY)
+    love.graphics.translate(math.floor(-map.camX + 0.5), math.floor(-map.camY + 0.5))
     map:render()
 
     -- end virtual resolution

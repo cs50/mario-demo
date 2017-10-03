@@ -41,7 +41,7 @@ while i > 0 do
     print(i)
 end
 
--- for loop, increments from 1 to 10
+-- for loop, decrements from 10 to 1
 for j = 10, 1, -1 do
     print(j)
 end

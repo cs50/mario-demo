@@ -41,7 +41,7 @@ function Map:create()
     local this = {
         -- our texture containing all sprites
         spritesheet = love.graphics.newImage('graphics/tiles.png'),
-        music = love.audio.newSource('music/overworld.mp3'),
+        music = love.audio.newSource('music/overworld.mp3', 'stream'),
         tileWidth = 16,
         tileHeight = 16,
         mapWidth = 100,

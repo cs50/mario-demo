@@ -177,7 +177,14 @@ end
 -- function to update camera offset based on player coordinates
 function Map:update(dt)
     self.player:update(dt)
-
+    
+	-- keep the player within the X playfield.
+    if self.player.x <= 0 then
+        self.player.x = 0
+    elseif self.player.x > 16 * self.mapWidth - self.player.width then
+        self.player.x = 16 * self.mapWidth - self.player.width
+    end
+    
     -- keep camera's X coordinate following the player, preventing camera from
     -- scrolling past 0 to the left and the map's width
     -- and also showing the _full_ map.
